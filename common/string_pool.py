@@ -70,7 +70,14 @@ class StringPool:
     
     def encode_and_intern(self, s: str, pool_type: str = 'generic') -> bytes:
         """Intern string and return its encoded bytes (also interned)."""
-        interned_str = self.intern(s)
+        if pool_type == 'principal':
+            interned_str = self.intern_principal(s)
+        elif pool_type == 'resource':
+            interned_str = self.intern_resource(s)
+        elif pool_type == 'action_id':
+            interned_str = self.intern_action_id(s)
+        else:
+            interned_str = self.intern(s)
         encoded = interned_str.encode("utf-8")
         return self.intern_bytes(encoded)
     
