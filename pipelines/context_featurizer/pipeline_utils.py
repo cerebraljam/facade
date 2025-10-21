@@ -20,6 +20,7 @@ import datetime
 import math
 from typing import Dict, Iterable, List, Tuple
 
+from common import string_pool
 from common import time_utils
 from context.graph.fold import Edge
 from context.graph.fold import two_hops_random_walk_neighbors
@@ -491,7 +492,8 @@ def featurize_context(
   for weight, peer in neighbors:
     peer_name = peer[1].removesuffix(PRINCIPAL_SUFFIX)
     token = weighted_words.tokens.add()
-    token.token = peer_name.encode("utf-8")
+    # Intern the peer name bytes to avoid duplicates
+    token.token = string_pool.encode_and_intern(peer_name, 'principal')
     token.weight = float(weight)
 
   return principal, result
