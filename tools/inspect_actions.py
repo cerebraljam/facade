@@ -73,7 +73,7 @@ def inspect_action_tfrecord(filename: str, max_examples: int = 5, action_type_fi
             if start_time and action_time < start_time:
                 total_records += 1
                 continue
-            if end_time and action_time > end_time:
+            if end_time and action_time >= end_time:
                 total_records += 1
                 continue
             
