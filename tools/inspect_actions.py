@@ -124,7 +124,7 @@ def inspect_action_tfrecord(filename: str, max_examples: int = 5, action_type_fi
             occurred_at = time_utils.convert_proto_time_to_time(action.occurred_at)
             if start_time and occurred_at < start_time:
                 continue
-            if end_time and occurred_at > end_time:
+            if end_time and occurred_at >= end_time:
                 continue
             
             # Apply action type filter if specified
