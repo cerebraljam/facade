@@ -113,9 +113,9 @@ if __name__ == '__main__':
         print("  context_type_filter: show only contexts of this type (optional)")
         print("Examples:")
         print("  python inspect_contexts.py")
-        print("  python inspect_contexts.py mercari/training_files/context.tfrecord")
-        print("  python inspect_contexts.py mercari/training_files/context.tfrecord 10")
-        print("  python inspect_contexts.py mercari/training_files/context.tfrecord 10 teams")
+        print("  python inspect_contexts.py sample/context.tfrecord")
+        print("  python inspect_contexts.py sample/context.tfrecord 10")
+        print("  python inspect_contexts.py sample/context.tfrecord 10 teams")
         sys.exit(0)
     
     filename = sys.argv[1] if len(sys.argv) > 1 else 'sample/context.tfrecord'

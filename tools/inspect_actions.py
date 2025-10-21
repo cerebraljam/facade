@@ -178,11 +178,11 @@ if __name__ == '__main__':
         epilog="""
 Examples:
   python inspect_actions.py
-  python inspect_actions.py --filename mercari/training_files/action.tfrecord
-  python inspect_actions.py --filename mercari/training_files/action.tfrecord --max-examples 10
-  python inspect_actions.py --filename mercari/training_files/action.tfrecord --action-type gdrive_doc_access
-  python inspect_actions.py --filename mercari/training_files/action.tfrecord --start-time "2024-01-01" --end-time "2024-01-31"
-  python inspect_actions.py --filename mercari/training_files/action.tfrecord --start-time "2024-01-01 10:00:00" --end-time "2024-01-01 18:00:00"
+  python inspect_actions.py --filename sample/action.tfrecord
+  python inspect_actions.py --filename sample/action.tfrecord --max-examples 10
+  python inspect_actions.py --filename sample/action.tfrecord --action-type gdrive_doc_access
+  python inspect_actions.py --filename sample/action.tfrecord --start-time "2024-01-01" --end-time "2024-01-31"
+  python inspect_actions.py --filename sample/action.tfrecord --start-time "2024-01-01 10:00:00" --end-time "2024-01-01 18:00:00"
         """
     )
     
