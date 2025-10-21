@@ -21,7 +21,7 @@ import random
 NodeType = Any
 
 ZERO_WEIGHT_THRESHOLD = 1e-9
-MAX_EDGES_FROM_MIDDLE = 1000
+MAX_EDGES_FROM_MIDDLE = 100
 
 
 @dataclass(frozen=True)
